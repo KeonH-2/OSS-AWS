@@ -13,7 +13,7 @@ selected = st.radio("정답을 골라보세요!", mc_options)
 
 if st.button("객관식 정답 확인"):
     if selected == mc_answer:
-        st.success("정답입니다! 🎉 철물 못 팔아도 돈 벌어요~")
+        st.success("정답입니다! 🎉 철물점은 못 팔아서 돈 벌어요~")
     else:
         st.error(f"오답입니다. 정답은 '{mc_answer}'입니다!")
 
