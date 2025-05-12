@@ -1,31 +1,34 @@
 import streamlit as st
 
-st.title("🧠 넌센스 퀴즈 도전!")
+st.title("😆 웃긴 넌센스 퀴즈")
 
-st.header("1. 객관식 퀴즈")
-st.write("Q. 소가 도망가면?")
+# 객관식 퀴즈
+st.header("1. 객관식 문제")
+st.write("Q. 못 팔아도 돈 버는 사람은?")
 
-options = ["도망소", "도소", "소도", "소실"]
-answer_mc = "도망소"
+mc_options = ["노점상", "철물점 주인", "무속인", "판매왕"]
+mc_answer = "철물점 주인"
 
-user_answer_mc = st.radio("정답을 고르세요:", options)
+selected = st.radio("정답을 골라보세요!", mc_options)
 
 if st.button("객관식 정답 확인"):
-    if user_answer_mc == answer_mc:
-        st.success("정답입니다! 🎉")
+    if selected == mc_answer:
+        st.success("정답입니다! 🎉 철물 못 팔아도 돈 벌어요~")
     else:
-        st.error(f"오답입니다! 😢 정답은 '{answer_mc}'입니다.")
+        st.error(f"오답입니다. 정답은 '{mc_answer}'입니다!")
 
+# 구분선
 st.divider()
 
-st.header("2. 주관식 퀴즈")
-st.write("Q. 세상에서 가장 지루한 중학교는?")
+# 주관식 퀴즈
+st.header("2. 주관식 문제")
+st.write("Q. 심장의 무게는?")
 
-user_answer_sc = st.text_input("정답을 입력하세요:")
+sc_answer = "두근"
+typed = st.text_input("정답을 입력하세요:")
 
 if st.button("주관식 정답 확인"):
-    correct_answer_sc = "중언부언중학교"
-    if user_answer_sc.strip() == correct_answer_sc:
-        st.success("정답입니다! 🎯")
+    if typed.strip() == sc_answer:
+        st.success("정답입니다! 💓 심장은 늘 두근거리죠!")
     else:
-        st.error(f"아쉽네요! 정답은 '{correct_answer_sc}'입니다.")
+        st.error(f"오답입니다. 정답은 '{sc_answer}'입니다.")
