@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("😆 웃긴 넌센스 퀴즈")
+st.title("😆 재치있는 넌센스 퀴즈")
 
 # 객관식 퀴즈
 st.header("1. 객관식 문제")
@@ -16,7 +16,7 @@ if st.button("객관식 정답 확인"):
         st.success("정답입니다! 🎉 철물점은 못 팔아서 돈 벌어요~")
         st.balloons()
     else:
-        st.error(f"오답입니다. 정답은 철물점은 못을 못 팔면 돈을 못 벌어요~ 😂")
+        st.error(f"오답입니다. 정답은 철물점ㄴ은 못을 못 팔면 돈을 못 벌어요~ 😂")
 
 # 구분선
 st.divider()
